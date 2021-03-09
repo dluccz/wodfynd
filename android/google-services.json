@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "304361454359",
+    "firebase_url": "https://wordconnect-rt4g5.firebaseio.com",
+    "project_id": "wordconnect-rt4g5",
+    "storage_bucket": "wordconnect-rt4g5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304361454359:android:2a4924690rbn157b704h2a",
+        "android_client_info": {
+          "package_name": "net.codecanyon.yourcodecanyonusername.android.worderful"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304361454359-4o2ag5eou7ck2p1b74sdvdj67ie4lqv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "TYzcSyR-2tsCtqKSUNPoqo6pqHP2BLr7om-T0n1"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304361454359-4o2ag5eou7ck2p1b74sdvdj67ie4lqv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

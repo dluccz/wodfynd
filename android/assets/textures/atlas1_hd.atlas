@@ -1,0 +1,675 @@
+
+atlas1_hd.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arrow
+  rotate: false
+  xy: 211, 209
+  size: 125, 88
+  orig: 125, 88
+  offset: 0, 0
+  index: -1
+arrow_left
+  rotate: false
+  xy: 717, 605
+  size: 57, 74
+  orig: 57, 74
+  offset: 0, 0
+  index: -1
+arrow_right
+  rotate: false
+  xy: 715, 529
+  size: 57, 74
+  orig: 57, 74
+  offset: 0, 0
+  index: -1
+back_down
+  rotate: false
+  xy: 776, 609
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+back_up
+  rotate: false
+  xy: 1581, 820
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+bg_green
+  rotate: false
+  xy: 1158, 741
+  size: 100, 49
+  orig: 100, 49
+  offset: 0, 0
+  index: -1
+bg_red
+  rotate: false
+  xy: 1260, 741
+  size: 100, 49
+  orig: 100, 49
+  offset: 0, 0
+  index: -1
+btn_dialog_disabled
+  rotate: false
+  xy: 481, 506
+  size: 125, 90
+  split: 45, 45, 30, 30
+  pad: 0, 0, 0, 0
+  orig: 125, 90
+  offset: 0, 0
+  index: -1
+btn_dialog_down
+  rotate: false
+  xy: 191, 25
+  size: 125, 90
+  split: 45, 45, 30, 30
+  pad: 0, 0, 0, 0
+  orig: 125, 90
+  offset: 0, 0
+  index: -1
+btn_dialog_up
+  rotate: false
+  xy: 187, 117
+  size: 125, 90
+  split: 45, 45, 30, 30
+  pad: 0, 0, 0, 0
+  orig: 125, 90
+  offset: 0, 0
+  index: -1
+bundle1
+  rotate: false
+  xy: 673, 805
+  size: 203, 140
+  orig: 203, 140
+  offset: 0, 0
+  index: -1
+bundle2
+  rotate: false
+  xy: 1163, 882
+  size: 203, 140
+  orig: 203, 140
+  offset: 0, 0
+  index: -1
+bundle3
+  rotate: false
+  xy: 468, 805
+  size: 203, 140
+  orig: 203, 140
+  offset: 0, 0
+  index: -1
+bundle4
+  rotate: false
+  xy: 263, 763
+  size: 203, 140
+  orig: 203, 140
+  offset: 0, 0
+  index: -1
+bundle_coins
+  rotate: false
+  xy: 1529, 810
+  size: 50, 73
+  orig: 50, 73
+  offset: 0, 0
+  index: -1
+bundle_finger_hint
+  rotate: false
+  xy: 736, 463
+  size: 40, 64
+  orig: 40, 64
+  offset: 0, 0
+  index: -1
+bundle_multi_random_hint
+  rotate: false
+  xy: 1429, 720
+  size: 40, 70
+  orig: 40, 70
+  offset: 0, 0
+  index: -1
+bundle_random_hint
+  rotate: false
+  xy: 1464, 811
+  size: 63, 72
+  orig: 63, 72
+  offset: 0, 0
+  index: -1
+bundle_rocket
+  rotate: false
+  xy: 338, 208
+  size: 38, 89
+  orig: 38, 89
+  offset: 0, 0
+  index: -1
+calendar_cell_checked
+  rotate: false
+  xy: 1711, 819
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+close
+  rotate: false
+  xy: 1053, 827
+  size: 108, 108
+  orig: 108, 108
+  offset: 0, 0
+  index: -1
+close_button_disabled
+  rotate: false
+  xy: 1471, 754
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+close_button_down
+  rotate: false
+  xy: 512, 210
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+close_button_up
+  rotate: false
+  xy: 512, 267
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+coin_big
+  rotate: false
+  xy: 608, 511
+  size: 105, 106
+  orig: 105, 106
+  offset: 0, 0
+  index: -1
+coin_small
+  rotate: false
+  xy: 410, 41
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+coin_view_bg
+  rotate: false
+  xy: 2, 22
+  size: 187, 64
+  orig: 187, 64
+  offset: 0, 0
+  index: -1
+coin_view_coin
+  rotate: false
+  xy: 1648, 824
+  size: 61, 61
+  orig: 61, 61
+  offset: 0, 0
+  index: -1
+coin_view_plus_down
+  rotate: false
+  xy: 318, 38
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+coin_view_plus_up
+  rotate: false
+  xy: 1533, 708
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+coins_to_earn
+  rotate: false
+  xy: 682, 947
+  size: 250, 75
+  orig: 250, 75
+  offset: 0, 0
+  index: -1
+combo_bg
+  rotate: false
+  xy: 368, 33
+  size: 40, 53
+  split: 3, 30, 18, 18
+  pad: 0, 0, 0, 0
+  orig: 40, 53
+  offset: 0, 0
+  index: -1
+dialog_bg
+  rotate: false
+  xy: 318, 88
+  size: 45, 56
+  split: 15, 15, 17, 26
+  pad: 0, 0, 0, 0
+  orig: 45, 56
+  offset: 0, 0
+  index: -1
+dialog_title
+  rotate: false
+  xy: 2, 905
+  size: 426, 117
+  orig: 426, 117
+  offset: 0, 0
+  index: -1
+feedback
+  rotate: false
+  xy: 626, 681
+  size: 150, 122
+  split: 57, 57, 41, 38
+  pad: 0, 0, 0, 0
+  orig: 150, 122
+  offset: 0, 0
+  index: -1
+finger_hint_big
+  rotate: false
+  xy: 440, 361
+  size: 85, 136
+  orig: 85, 136
+  offset: 0, 0
+  index: -1
+finger_hint_small
+  rotate: false
+  xy: 1471, 714
+  size: 60, 38
+  orig: 60, 38
+  offset: 0, 0
+  index: -1
+flat_btn
+  rotate: false
+  xy: 569, 284
+  size: 30, 30
+  split: 12, 13, 13, 13
+  pad: 0, 0, 0, 0
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+gdpr
+  rotate: false
+  xy: 445, 259
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+gift_box_lid
+  rotate: false
+  xy: 1368, 885
+  size: 192, 137
+  orig: 192, 137
+  offset: 0, 0
+  index: -1
+gift_box_open
+  rotate: false
+  xy: 1562, 887
+  size: 159, 135
+  orig: 159, 135
+  offset: 0, 0
+  index: -1
+gift_glow
+  rotate: false
+  xy: 468, 721
+  size: 156, 82
+  orig: 156, 82
+  offset: 0, 0
+  index: -1
+giftbox_closed
+  rotate: false
+  xy: 2, 88
+  size: 183, 166
+  orig: 183, 166
+  offset: 0, 0
+  index: -1
+giftbox_open
+  rotate: false
+  xy: 2, 256
+  size: 207, 193
+  orig: 207, 193
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 481, 598
+  size: 121, 121
+  orig: 121, 121
+  offset: 0, 0
+  index: -1
+help_hand
+  rotate: false
+  xy: 778, 676
+  size: 102, 127
+  orig: 102, 127
+  offset: 0, 0
+  index: -1
+hint_light
+  rotate: false
+  xy: 1723, 871
+  size: 150, 151
+  orig: 150, 151
+  offset: 0, 0
+  index: -1
+howtoplay_1
+  rotate: false
+  xy: 1875, 872
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+howtoplay_2
+  rotate: false
+  xy: 211, 299
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+howtoplay_3
+  rotate: false
+  xy: 329, 499
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+iap_card1
+  rotate: false
+  xy: 1071, 748
+  size: 85, 77
+  split: 28, 29, 26, 27
+  pad: 0, 0, 0, 0
+  orig: 85, 77
+  offset: 0, 0
+  index: -1
+iap_card2
+  rotate: false
+  xy: 409, 88
+  size: 42, 42
+  split: 15, 15, 14, 14
+  pad: 0, 0, 0, 0
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+ic_email
+  rotate: false
+  xy: 378, 186
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+ic_language
+  rotate: false
+  xy: 910, 609
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+ic_rate_us
+  rotate: false
+  xy: 445, 192
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+ic_sound
+  rotate: false
+  xy: 1362, 725
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+ic_video
+  rotate: false
+  xy: 318, 2
+  size: 45, 34
+  orig: 45, 34
+  offset: 0, 0
+  index: -1
+invite_coins
+  rotate: false
+  xy: 2, 643
+  size: 259, 260
+  orig: 259, 260
+  offset: 0, 0
+  index: -1
+knob_down
+  rotate: false
+  xy: 1763, 820
+  size: 48, 49
+  orig: 48, 49
+  offset: 0, 0
+  index: -1
+knob_up
+  rotate: false
+  xy: 1813, 820
+  size: 48, 49
+  orig: 48, 49
+  offset: 0, 0
+  index: -1
+loading
+  rotate: false
+  xy: 882, 698
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+multi_random_hint_big
+  rotate: false
+  xy: 1009, 718
+  size: 60, 105
+  orig: 60, 105
+  offset: 0, 0
+  index: -1
+multi_random_hint_small
+  rotate: false
+  xy: 517, 324
+  size: 60, 35
+  orig: 60, 35
+  offset: 0, 0
+  index: -1
+padlock
+  rotate: false
+  xy: 579, 316
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+play_r_down
+  rotate: false
+  xy: 878, 825
+  size: 173, 110
+  split: 87, 58, 37, 37
+  pad: 0, 0, 0, 0
+  orig: 173, 110
+  offset: 0, 0
+  index: -1
+play_r_up
+  rotate: false
+  xy: 263, 651
+  size: 173, 110
+  split: 87, 58, 37, 37
+  pad: 0, 0, 0, 0
+  orig: 173, 110
+  offset: 0, 0
+  index: -1
+random_hint_big
+  rotate: false
+  xy: 527, 383
+  size: 105, 121
+  orig: 105, 121
+  offset: 0, 0
+  index: -1
+random_hint_small
+  rotate: false
+  xy: 376, 132
+  size: 60, 52
+  orig: 60, 52
+  offset: 0, 0
+  index: -1
+rect
+  rotate: false
+  xy: 604, 689
+  size: 20, 30
+  split: 7, 7, 10, 10
+  pad: 0, 0, 0, 0
+  orig: 20, 30
+  offset: 0, 0
+  index: -1
+remove_ads
+  rotate: false
+  xy: 634, 409
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+remove_ads2
+  rotate: false
+  xy: 430, 947
+  size: 250, 75
+  orig: 250, 75
+  offset: 0, 0
+  index: -1
+reward_count_bg
+  rotate: false
+  xy: 1163, 792
+  size: 175, 88
+  orig: 175, 88
+  offset: 0, 0
+  index: -1
+ribbon
+  rotate: false
+  xy: 934, 937
+  size: 227, 85
+  split: 87, 87, 28, 24
+  pad: 0, 0, 0, 0
+  orig: 227, 85
+  offset: 0, 0
+  index: -1
+rocket_big
+  rotate: false
+  xy: 363, 320
+  size: 75, 177
+  orig: 75, 177
+  offset: 0, 0
+  index: -1
+rocket_small
+  rotate: false
+  xy: 440, 326
+  size: 75, 33
+  orig: 75, 33
+  offset: 0, 0
+  index: -1
+round_rect_shadow
+  rotate: false
+  xy: 430, 910
+  size: 35, 35
+  split: 11, 14, 11, 15
+  pad: 0, 0, 0, 0
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+rrect
+  rotate: false
+  xy: 329, 467
+  size: 30, 30
+  split: 10, 10, 10, 10
+  pad: 0, 0, 0, 0
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+settings_down
+  rotate: false
+  xy: 843, 609
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+settings_up
+  rotate: false
+  xy: 378, 253
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
+  index: -1
+single_hint_bulb
+  rotate: false
+  xy: 736, 397
+  size: 43, 64
+  orig: 43, 64
+  offset: 0, 0
+  index: -1
+spark
+  rotate: false
+  xy: 314, 146
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+sparkle
+  rotate: false
+  xy: 1528, 758
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+splash_logo
+  rotate: false
+  xy: 2, 451
+  size: 325, 190
+  orig: 325, 190
+  offset: 0, 0
+  index: -1
+star_template_1
+  rotate: false
+  xy: 1071, 726
+  size: 84, 20
+  orig: 84, 20
+  offset: 0, 0
+  index: -1
+star_template_2
+  rotate: false
+  xy: 634, 387
+  size: 84, 20
+  orig: 84, 20
+  offset: 0, 0
+  index: -1
+star_template_3
+  rotate: false
+  xy: 882, 676
+  size: 84, 20
+  orig: 84, 20
+  offset: 0, 0
+  index: -1
+star_template_empty
+  rotate: false
+  xy: 527, 361
+  size: 84, 20
+  orig: 84, 20
+  offset: 0, 0
+  index: -1
+tooltip
+  rotate: false
+  xy: 1340, 792
+  size: 56, 88
+  split: 12, 40, 29, 30
+  pad: 0, 0, 0, 0
+  orig: 56, 88
+  offset: 0, 0
+  index: -1
+ui_switch_border
+  rotate: false
+  xy: 604, 619
+  size: 111, 60
+  orig: 111, 60
+  offset: 0, 0
+  index: -1
+value_bg
+  rotate: false
+  xy: 365, 88
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+wheel_arrow
+  rotate: false
+  xy: 1398, 792
+  size: 64, 91
+  orig: 64, 91
+  offset: 0, 0
+  index: -1

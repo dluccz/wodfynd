@@ -1,0 +1,90 @@
+
+atlas4_hdr.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coins1
+  rotate: false
+  xy: 1296, 809
+  size: 150, 123
+  orig: 150, 123
+  offset: 0, 0
+  index: -1
+coins2
+  rotate: false
+  xy: 671, 60
+  size: 170, 147
+  orig: 170, 147
+  offset: 0, 0
+  index: -1
+coins3
+  rotate: false
+  xy: 903, 616
+  size: 180, 186
+  orig: 180, 186
+  offset: 0, 0
+  index: -1
+coins4
+  rotate: false
+  xy: 903, 804
+  size: 210, 198
+  orig: 210, 198
+  offset: 0, 0
+  index: -1
+coins5
+  rotate: false
+  xy: 671, 571
+  size: 230, 184
+  orig: 230, 184
+  offset: 0, 0
+  index: -1
+coins6
+  rotate: false
+  xy: 671, 757
+  size: 230, 245
+  orig: 230, 245
+  offset: 0, 0
+  index: -1
+en
+  rotate: false
+  xy: 1115, 823
+  size: 179, 179
+  orig: 179, 179
+  offset: 0, 0
+  index: -1
+gold_pack
+  rotate: false
+  xy: 671, 390
+  size: 195, 179
+  orig: 195, 179
+  offset: 0, 0
+  index: -1
+level_clear_en
+  rotate: false
+  xy: 1296, 934
+  size: 297, 35
+  orig: 297, 35
+  offset: 0, 0
+  index: -1
+level_clear_tr
+  rotate: false
+  xy: 1296, 971
+  size: 304, 31
+  orig: 304, 31
+  offset: 0, 0
+  index: -1
+rays
+  rotate: false
+  xy: 2, 2
+  size: 667, 1000
+  orig: 667, 1000
+  offset: 0, 0
+  index: -1
+tr
+  rotate: false
+  xy: 671, 209
+  size: 179, 179
+  orig: 179, 179
+  offset: 0, 0
+  index: -1

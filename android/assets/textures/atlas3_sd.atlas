@@ -1,0 +1,328 @@
+
+atlas3_sd.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bomb
+  rotate: false
+  xy: 1675, 189
+  size: 47, 65
+  orig: 47, 65
+  offset: 0, 0
+  index: -1
+bomb_fire
+  rotate: false
+  xy: 1409, 177
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+bonus_bar_bg
+  rotate: false
+  xy: 252, 230
+  size: 225, 24
+  orig: 225, 24
+  offset: 0, 0
+  index: -1
+bonus_words_bar_track
+  rotate: false
+  xy: 252, 204
+  size: 225, 24
+  orig: 225, 24
+  offset: 0, 0
+  index: -1
+coin_rotate
+  rotate: false
+  xy: 1779, 204
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 1
+coin_rotate
+  rotate: false
+  xy: 527, 102
+  size: 44, 50
+  orig: 44, 50
+  offset: 0, 0
+  index: 6
+coin_rotate
+  rotate: false
+  xy: 573, 102
+  size: 44, 50
+  orig: 44, 50
+  offset: 0, 0
+  index: 2
+coin_rotate
+  rotate: false
+  xy: 1347, 149
+  size: 24, 51
+  orig: 24, 51
+  offset: 0, 0
+  index: 3
+coin_rotate
+  rotate: false
+  xy: 1373, 141
+  size: 24, 51
+  orig: 24, 51
+  offset: 0, 0
+  index: 5
+coin_rotate
+  rotate: false
+  xy: 1399, 142
+  size: 8, 50
+  orig: 8, 50
+  offset: 0, 0
+  index: 4
+combo
+  rotate: false
+  xy: 252, 35
+  size: 68, 65
+  orig: 68, 65
+  offset: 0, 0
+  index: 14
+combo
+  rotate: false
+  xy: 322, 38
+  size: 64, 62
+  orig: 64, 62
+  offset: 0, 0
+  index: 12
+combo
+  rotate: false
+  xy: 388, 40
+  size: 64, 60
+  orig: 64, 60
+  offset: 0, 0
+  index: 13
+combo
+  rotate: false
+  xy: 1375, 194
+  size: 64, 60
+  orig: 64, 60
+  offset: 0, 0
+  index: 10
+combo
+  rotate: false
+  xy: 1441, 194
+  size: 64, 60
+  orig: 64, 60
+  offset: 0, 0
+  index: 11
+combo
+  rotate: false
+  xy: 1507, 198
+  size: 58, 56
+  orig: 58, 56
+  offset: 0, 0
+  index: 9
+combo
+  rotate: false
+  xy: 1724, 204
+  size: 53, 50
+  orig: 53, 50
+  offset: 0, 0
+  index: 8
+combo
+  rotate: false
+  xy: 478, 107
+  size: 47, 45
+  orig: 47, 45
+  offset: 0, 0
+  index: 7
+combo
+  rotate: false
+  xy: 619, 113
+  size: 41, 39
+  orig: 41, 39
+  offset: 0, 0
+  index: 6
+combo
+  rotate: false
+  xy: 322, 2
+  size: 35, 34
+  orig: 35, 34
+  offset: 0, 0
+  index: 5
+combo
+  rotate: false
+  xy: 662, 124
+  size: 30, 28
+  orig: 30, 28
+  offset: 0, 0
+  index: 4
+combo
+  rotate: false
+  xy: 359, 13
+  size: 24, 23
+  orig: 24, 23
+  offset: 0, 0
+  index: 3
+combo
+  rotate: false
+  xy: 694, 134
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: 2
+combo
+  rotate: false
+  xy: 1724, 190
+  size: 13, 12
+  orig: 13, 12
+  offset: 0, 0
+  index: 1
+combo
+  rotate: false
+  xy: 2039, 247
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: 0
+cup_rays
+  rotate: false
+  xy: 2, 12
+  size: 248, 242
+  orig: 248, 242
+  offset: 0, 0
+  index: -1
+explosion
+  rotate: false
+  xy: 252, 102
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 10
+explosion
+  rotate: false
+  xy: 354, 102
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 3
+explosion
+  rotate: false
+  xy: 479, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 5
+explosion
+  rotate: false
+  xy: 581, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 7
+explosion
+  rotate: false
+  xy: 683, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 4
+explosion
+  rotate: false
+  xy: 785, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 9
+explosion
+  rotate: false
+  xy: 887, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 1
+explosion
+  rotate: false
+  xy: 989, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 6
+explosion
+  rotate: false
+  xy: 1091, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 8
+explosion
+  rotate: false
+  xy: 1193, 154
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: 2
+gift_ray
+  rotate: false
+  xy: 456, 114
+  size: 20, 88
+  orig: 20, 88
+  offset: 0, 0
+  index: -1
+got_hit
+  rotate: false
+  xy: 1831, 208
+  size: 50, 46
+  orig: 50, 46
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 1935, 211
+  size: 50, 43
+  orig: 50, 43
+  offset: 0, 0
+  index: 2
+idle
+  rotate: false
+  xy: 1987, 211
+  size: 50, 43
+  orig: 50, 43
+  offset: 0, 0
+  index: 1
+jump_fall
+  rotate: false
+  xy: 1883, 208
+  size: 50, 46
+  orig: 50, 46
+  offset: 0, 0
+  index: -1
+jump_up
+  rotate: false
+  xy: 1295, 154
+  size: 50, 46
+  orig: 50, 46
+  offset: 0, 0
+  index: -1
+rewarded_video_glow
+  rotate: false
+  xy: 1567, 200
+  size: 54, 54
+  orig: 54, 54
+  offset: 0, 0
+  index: -1
+rocket
+  rotate: false
+  xy: 252, 12
+  size: 34, 21
+  orig: 34, 21
+  offset: 0, 0
+  index: -1
+ufo
+  rotate: false
+  xy: 1295, 202
+  size: 78, 52
+  orig: 78, 52
+  offset: 0, 0
+  index: -1
+ufo_thrust
+  rotate: false
+  xy: 1623, 179
+  size: 50, 75
+  orig: 50, 75
+  offset: 0, 0
+  index: -1

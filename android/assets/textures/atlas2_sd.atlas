@@ -1,0 +1,224 @@
+
+atlas2_sd.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+board_cell
+  rotate: false
+  xy: 978, 160
+  size: 15, 15
+  split: 6, 6, 6, 6
+  pad: 0, 0, 0, 0
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+board_cell_solved
+  rotate: false
+  xy: 1055, 179
+  size: 8, 8
+  split: 3, 3, 3, 3
+  pad: 0, 0, 0, 0
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+box_rays
+  rotate: false
+  xy: 680, 108
+  size: 144, 144
+  orig: 144, 144
+  offset: 0, 0
+  index: -1
+btn_dictionary_down
+  rotate: false
+  xy: 1449, 205
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+btn_dictionary_up
+  rotate: false
+  xy: 1400, 205
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+cup
+  rotate: false
+  xy: 826, 149
+  size: 150, 103
+  orig: 150, 103
+  offset: 0, 0
+  index: -1
+dial
+  rotate: false
+  xy: 473, 47
+  size: 205, 205
+  orig: 205, 205
+  offset: 0, 0
+  index: -1
+dial_button
+  rotate: false
+  xy: 978, 177
+  size: 75, 75
+  orig: 75, 75
+  offset: 0, 0
+  index: -1
+disc_particle
+  rotate: false
+  xy: 862, 116
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+extra_words_down
+  rotate: false
+  xy: 1543, 209
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+extra_words_up
+  rotate: false
+  xy: 1498, 209
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+finger_hint_down
+  rotate: false
+  xy: 1120, 198
+  size: 54, 54
+  orig: 54, 54
+  offset: 0, 0
+  index: -1
+finger_hint_up
+  rotate: false
+  xy: 1232, 198
+  size: 54, 54
+  orig: 54, 54
+  offset: 0, 0
+  index: -1
+hint_btn_cost_bg
+  rotate: false
+  xy: 473, 30
+  size: 42, 15
+  split: 15, 15, 5, 5
+  pad: 0, 0, 0, 0
+  orig: 42, 15
+  offset: 0, 0
+  index: -1
+hint_empty_down
+  rotate: false
+  xy: 1176, 198
+  size: 54, 54
+  orig: 54, 54
+  offset: 0, 0
+  index: -1
+hint_empty_up
+  rotate: false
+  xy: 739, 52
+  size: 54, 54
+  orig: 54, 54
+  offset: 0, 0
+  index: -1
+lucky_wheel
+  rotate: false
+  xy: 2, 2
+  size: 250, 250
+  orig: 250, 250
+  offset: 0, 0
+  index: -1
+preview
+  rotate: false
+  xy: 1768, 218
+  size: 31, 34
+  split: 15, 14, 11, 11
+  pad: 0, 0, 0, 0
+  orig: 31, 34
+  offset: 0, 0
+  index: -1
+random_hint_multi_down
+  rotate: false
+  xy: 1678, 209
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+random_hint_multi_up
+  rotate: false
+  xy: 1633, 209
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+rewarded_video_down
+  rotate: false
+  xy: 1723, 209
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+rewarded_video_up
+  rotate: false
+  xy: 1588, 209
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+rocket_coin
+  rotate: false
+  xy: 680, 48
+  size: 57, 58
+  orig: 57, 58
+  offset: 0, 0
+  index: -1
+shuffle_down
+  rotate: false
+  xy: 1288, 198
+  size: 54, 54
+  orig: 54, 54
+  offset: 0, 0
+  index: -1
+shuffle_up
+  rotate: false
+  xy: 1344, 198
+  size: 54, 54
+  orig: 54, 54
+  offset: 0, 0
+  index: -1
+smoke
+  rotate: false
+  xy: 254, 27
+  size: 217, 225
+  orig: 217, 225
+  offset: 0, 0
+  index: -1
+star_particle
+  rotate: false
+  xy: 826, 113
+  size: 34, 34
+  orig: 34, 34
+  offset: 0, 0
+  index: -1
+stripe_particle
+  rotate: false
+  xy: 254, 14
+  size: 71, 11
+  orig: 71, 11
+  offset: 0, 0
+  index: -1
+wave
+  rotate: false
+  xy: 1801, 222
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+wave_badge
+  rotate: false
+  xy: 1055, 189
+  size: 63, 63
+  orig: 63, 63
+  offset: 0, 0
+  index: -1

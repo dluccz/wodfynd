@@ -1,0 +1,328 @@
+
+atlas3_hdr.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bomb
+  rotate: false
+  xy: 2, 3
+  size: 189, 261
+  orig: 189, 261
+  offset: 0, 0
+  index: -1
+bomb_fire
+  rotate: false
+  xy: 1978, 1380
+  size: 61, 59
+  orig: 61, 59
+  offset: 0, 0
+  index: -1
+bonus_bar_bg
+  rotate: false
+  xy: 995, 1141
+  size: 898, 94
+  orig: 898, 94
+  offset: 0, 0
+  index: -1
+bonus_words_bar_track
+  rotate: false
+  xy: 995, 1045
+  size: 898, 94
+  orig: 898, 94
+  offset: 0, 0
+  index: -1
+coin_rotate
+  rotate: false
+  xy: 2016, 1617
+  size: 30, 198
+  orig: 30, 198
+  offset: 0, 0
+  index: 4
+coin_rotate
+  rotate: false
+  xy: 1881, 1237
+  size: 95, 202
+  orig: 95, 202
+  offset: 0, 0
+  index: 3
+coin_rotate
+  rotate: false
+  xy: 806, 868
+  size: 175, 200
+  orig: 175, 200
+  offset: 0, 0
+  index: 6
+coin_rotate
+  rotate: false
+  xy: 806, 666
+  size: 175, 200
+  orig: 175, 200
+  offset: 0, 0
+  index: 2
+coin_rotate
+  rotate: false
+  xy: 193, 63
+  size: 200, 201
+  orig: 200, 201
+  offset: 0, 0
+  index: 1
+coin_rotate
+  rotate: false
+  xy: 806, 210
+  size: 95, 202
+  orig: 95, 202
+  offset: 0, 0
+  index: 5
+combo
+  rotate: false
+  xy: 1799, 1817
+  size: 233, 222
+  orig: 233, 222
+  offset: 0, 0
+  index: 9
+combo
+  rotate: false
+  xy: 1881, 1441
+  size: 164, 156
+  orig: 164, 156
+  offset: 0, 0
+  index: 6
+combo
+  rotate: false
+  xy: 806, 529
+  size: 141, 135
+  orig: 141, 135
+  offset: 0, 0
+  index: 5
+combo
+  rotate: false
+  xy: 949, 638
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: 0
+combo
+  rotate: false
+  xy: 1787, 797
+  size: 256, 246
+  orig: 256, 246
+  offset: 0, 0
+  index: 12
+combo
+  rotate: false
+  xy: 1787, 555
+  size: 256, 240
+  orig: 256, 240
+  offset: 0, 0
+  index: 10
+combo
+  rotate: false
+  xy: 1895, 1059
+  size: 95, 91
+  orig: 95, 91
+  offset: 0, 0
+  index: 3
+combo
+  rotate: false
+  xy: 1992, 1102
+  size: 50, 48
+  orig: 50, 48
+  offset: 0, 0
+  index: 1
+combo
+  rotate: false
+  xy: 806, 414
+  size: 119, 113
+  orig: 119, 113
+  offset: 0, 0
+  index: 4
+combo
+  rotate: false
+  xy: 395, 2
+  size: 270, 260
+  orig: 270, 260
+  offset: 0, 0
+  index: 14
+combo
+  rotate: false
+  xy: 667, 192
+  size: 72, 70
+  orig: 72, 70
+  offset: 0, 0
+  index: 2
+combo
+  rotate: false
+  xy: 1492, 313
+  size: 256, 240
+  orig: 256, 240
+  offset: 0, 0
+  index: 11
+combo
+  rotate: false
+  xy: 1180, 193
+  size: 256, 240
+  orig: 256, 240
+  offset: 0, 0
+  index: 13
+combo
+  rotate: false
+  xy: 903, 139
+  size: 210, 200
+  orig: 210, 200
+  offset: 0, 0
+  index: 8
+combo
+  rotate: false
+  xy: 1115, 13
+  size: 188, 178
+  orig: 188, 178
+  offset: 0, 0
+  index: 7
+cup_rays
+  rotate: false
+  xy: 2, 1070
+  size: 991, 969
+  orig: 991, 969
+  offset: 0, 0
+  index: -1
+explosion
+  rotate: false
+  xy: 995, 1639
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 8
+explosion
+  rotate: false
+  xy: 995, 1237
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 2
+explosion
+  rotate: false
+  xy: 1397, 1639
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 10
+explosion
+  rotate: false
+  xy: 1397, 1237
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 5
+explosion
+  rotate: false
+  xy: 2, 668
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 7
+explosion
+  rotate: false
+  xy: 404, 668
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 4
+explosion
+  rotate: false
+  xy: 983, 643
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 9
+explosion
+  rotate: false
+  xy: 2, 266
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 1
+explosion
+  rotate: false
+  xy: 404, 264
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 6
+explosion
+  rotate: false
+  xy: 1385, 643
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: 3
+gift_ray
+  rotate: false
+  xy: 1799, 1247
+  size: 80, 350
+  orig: 80, 350
+  offset: 0, 0
+  index: -1
+got_hit
+  rotate: false
+  xy: 1750, 369
+  size: 200, 184
+  orig: 200, 184
+  offset: 0, 0
+  index: -1
+idle
+  rotate: false
+  xy: 1438, 139
+  size: 200, 172
+  orig: 200, 172
+  offset: 0, 0
+  index: 2
+idle
+  rotate: false
+  xy: 1640, 9
+  size: 200, 172
+  orig: 200, 172
+  offset: 0, 0
+  index: 1
+jump_fall
+  rotate: false
+  xy: 1750, 183
+  size: 200, 184
+  orig: 200, 184
+  offset: 0, 0
+  index: -1
+jump_up
+  rotate: false
+  xy: 667, 6
+  size: 200, 184
+  orig: 200, 184
+  offset: 0, 0
+  index: -1
+rewarded_video_glow
+  rotate: false
+  xy: 1799, 1599
+  size: 215, 216
+  orig: 215, 216
+  offset: 0, 0
+  index: -1
+rocket
+  rotate: false
+  xy: 1895, 1152
+  size: 135, 83
+  orig: 135, 83
+  offset: 0, 0
+  index: -1
+ufo
+  rotate: false
+  xy: 1180, 435
+  size: 310, 206
+  orig: 310, 206
+  offset: 0, 0
+  index: -1
+ufo_thrust
+  rotate: false
+  xy: 978, 341
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,26 @@
+{
+	"fonts":{
+		"font_medium":"fonts/Montserrat-Medium.ttf",
+		"font_bold":"fonts/Montserrat-Bold.ttf"
+	},
+	"game":{"total_words_to_earn_bonus":50},
+	
+	"settings_menu":{
+		"menu_item_language_enabled":true,
+		"menu_item_sound_enabled":true,
+		"menu_item_rateus_enabled":true,
+		"menu_item_support_enabled":true,
+		"menu_item_privacy_enabled":true,
+		"menu_item_privacy_policy_enabled":true,
+		"menu_item_privacy_tos_enabled":true
+	},
+	
+	"available_languages":{
+		"en":{"flag":"en.png", "label":"English"},
+		"tr":{"flag":"tr.png", "label":"Türkçe"},
+		"ar":{"flag":"ar.png", "label":"عربى"}
+	}
+		
+		
+	
+}
