@@ -401,8 +401,11 @@ public class ShoppingDialog extends Group implements BackNavigator {
             sequenceAction.addAction(runnableAction);
         }
 
-        row.addAction(new SequenceAction(Actions.delay(time), Actions.fadeOut(0.24f)));
-        row.addAction(sequenceAction);
+        //Update
+        if(row != null) {
+            row.addAction(new SequenceAction(Actions.delay(time), Actions.fadeOut(0.24f)));
+            row.addAction(sequenceAction);
+        }
     }
 
 

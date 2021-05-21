@@ -18,9 +18,11 @@ public class CameraShaker {
 
 
 
+
+
     private void init(float shakeRadius){
-        originalX = 0f;
-        originalY = 0f;
+        //originalX = 0f;
+        //originalY = 0f;
         originalShakeRadius = shakeRadius;
         offsetX = 0f;
         offsetY = 0f;
