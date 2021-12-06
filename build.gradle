@@ -11,8 +11,8 @@ buildscript {
     }
     dependencies {
         classpath 'org.wisepersist:gwt-gradle-plugin:1.0.13'
-        classpath 'com.android.tools.build:gradle:4.1.2'
-        classpath 'com.google.gms:google-services:4.3.5'
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'com.google.gms:google-services:4.3.10'
 
     }
 }
@@ -74,11 +74,12 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
         implementation 'org.jsoup:jsoup:1.13.1'
-        implementation "com.google.android.gms:play-services-ads:19.4.0"
-        implementation 'com.google.android.ump:user-messaging-platform:1.0.0'
-        implementation 'com.android.billingclient:billing:3.0.2'
+        implementation "com.google.android.gms:play-services-ads:20.5.0"
+        implementation 'com.google.android.ump:user-messaging-platform:2.0.0'
+        implementation 'com.android.billingclient:billing:4.0.0'
         implementation platform('com.google.firebase:firebase-bom:25.11.0')
         implementation 'com.google.firebase:firebase-messaging'
+        implementation 'com.android.support:multidex:1.0.3'
     }
 }
 

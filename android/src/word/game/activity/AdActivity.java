@@ -9,18 +9,7 @@ import androidx.annotation.Nullable;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.android.AndroidApplication;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.rewarded.RewardItem;
-import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdCallback;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +19,20 @@ import word.game.managers.AdManager;
 import word.game.model.GameData;
 import word.game.util.RewardedVideoCloseCallback;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.OnUserEarnedRewardListener;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+import com.google.android.gms.ads.rewarded.RewardItem;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.ump.ConsentDebugSettings;
 import com.google.android.ump.ConsentForm;
 import com.google.android.ump.ConsentInformation;
@@ -44,8 +47,8 @@ public class AdActivity extends AndroidApplication implements AdManager {
     private boolean isRewardedVideoEnabledToSpinWheel;
     protected boolean isInterstitialEnabled;
 
-    private InterstitialAd interstitialAd;
-    private RewardedAd rewardedAd;
+    private InterstitialAd m_interstitialAd;
+    private RewardedAd m_rewardedAd;
     private RewardedVideoCloseCallback rewardedAdFinishedCallback;
     private Runnable interstitialClosedCallback;
     private boolean rewardEarned;
@@ -181,6 +184,7 @@ public class AdActivity extends AndroidApplication implements AdManager {
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
+                Log.d("rewarded", "onInitializationComplete");
                 if(isRewardedVideoEnabledToEarnCoins || isRewardedVideoEnabledToEarnMoves || isRewardedVideoEnabledToSpinWheel) initRewardedAds();
                 if(isInterstitialEnabled) loadInterstitialAds();
                 MobileAds.setAppMuted(GameData.isGameMuted());
@@ -195,8 +199,8 @@ public class AdActivity extends AndroidApplication implements AdManager {
 
 
     private void initRewardedAds(){
-        rewardedAd = new RewardedAd(this, getString(R.string.ADMOB_REWARDED_AD_UNIT_ID));
-        rewardedAd.loadAd(new AdRequest.Builder().build(), rewardedAdLoadCallback);
+        m_rewardedAd = null;
+        RewardedAd.load(this, getString(R.string.ADMOB_REWARDED_AD_UNIT_ID), new AdRequest.Builder().build(), rewardedAdLoadCallback);
     }
 
 
@@ -204,34 +208,46 @@ public class AdActivity extends AndroidApplication implements AdManager {
 
     private void loadInterstitialAds(){
         Log.d("interstitial_ad", isInterstitialEnabled+"");
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(getString(R.string.ADMOB_INTERSTITIAL_AD_UNIT_ID));
-        interstitialAd.setAdListener(interstitialAdListener);
-        interstitialAd.loadAd(new AdRequest.Builder().build());
+        m_interstitialAd = null;
+        if(isInterstitialAdEnabled()) InterstitialAd.load(this, getString(R.string.ADMOB_INTERSTITIAL_AD_UNIT_ID), new AdRequest.Builder().build(), interstitialAdLoadCallback);
 
     }
 
 
 
-
-    private AdListener interstitialAdListener = new AdListener(){
+    private InterstitialAdLoadCallback interstitialAdLoadCallback = new InterstitialAdLoadCallback(){
 
         @Override
-        public void onAdLoaded() {
+        public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
             Log.d("interstitial_ad", "Interstitial ad loaded");
+            m_interstitialAd = interstitialAd;
+            interstitialAd.setFullScreenContentCallback(interstitialCallback);
         }
 
         @Override
-        public void onAdFailedToLoad(LoadAdError adError) {
-            Log.d("interstitial_ad", "Interstitial ad failed to load: " + adError.toString());
+        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+            Log.d("interstitial_ad", "Interstitial ad failed to load: " + loadAdError.toString());
+            m_interstitialAd = null;
             tryToLoadInterstitialAgain();
         }
 
+    };
+
+
+
+    private FullScreenContentCallback interstitialCallback = new FullScreenContentCallback(){
+
         @Override
-        public void onAdClosed() {
+        public void onAdDismissedFullScreenContent() {
+            loadInterstitialAds();
             if(interstitialClosedCallback != null) interstitialClosedCallback.run();
-            interstitialAd.loadAd(new AdRequest.Builder().build());
         }
+
+        @Override
+        public void onAdFailedToShowFullScreenContent(AdError adError) {
+            tryToLoadInterstitialAgain();
+        }
+
     };
 
 
@@ -240,13 +256,15 @@ public class AdActivity extends AndroidApplication implements AdManager {
     private RewardedAdLoadCallback rewardedAdLoadCallback = new RewardedAdLoadCallback(){
 
         @Override
-        public void onRewardedAdLoaded() {
+        public void onAdLoaded(@NonNull RewardedAd rewardedAd) {
             Log.d("rewarded_ad", "Rewarded ad loaded");
+            m_rewardedAd = rewardedAd;
         }
 
         @Override
-        public void onRewardedAdFailedToLoad(LoadAdError adError) {
-            Log.d("rewarded_ad", "Rewarded ad failed to load: " + adError.toString());
+        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+            Log.d("rewarded_ad", "Rewarded ad failed to load: " + loadAdError.toString());
+            m_rewardedAd = null;
             tryToLoadRewardedAgain();
         }
     };
@@ -254,23 +272,7 @@ public class AdActivity extends AndroidApplication implements AdManager {
 
 
 
-    private RewardedAdCallback rewardedAdCallback = new RewardedAdCallback() {
 
-        @Override
-        public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
-            rewardEarned = true;
-
-        }
-
-
-        @Override
-        public void onRewardedAdClosed() {
-            Log.d("rewarded_ad", "onRewardedAdClosed, earned:" + rewardEarned);
-            initRewardedAds();
-            rewardedAdFinishedCallback.closed(rewardEarned);
-
-        }
-    };
 
 
 
@@ -280,7 +282,7 @@ public class AdActivity extends AndroidApplication implements AdManager {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(60000);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -301,11 +303,11 @@ public class AdActivity extends AndroidApplication implements AdManager {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(60000);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            interstitialAd.loadAd(new AdRequest.Builder().build());
+                            loadInterstitialAds();
                         }
                     });
                 } catch (InterruptedException e) {
@@ -346,29 +348,7 @@ public class AdActivity extends AndroidApplication implements AdManager {
 
     @Override
     public boolean isRewardedAdLoaded() {
-        if(rewardedAd == null) return false;
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                rewardedLoaded = rewardedAd.isLoaded();
-                synchronized(this){
-                    this.notify();
-                }
-            }
-        };
-
-        synchronized(r) {
-            runOnUiThread(r);
-
-            try {
-                r.wait() ;
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-        return rewardedLoaded;
+        return m_rewardedAd != null;
     }
 
 
@@ -377,31 +357,7 @@ public class AdActivity extends AndroidApplication implements AdManager {
 
     @Override
     public boolean isInterstitialAdLoaded() {
-
-        if(interstitialAd == null) return false;
-
-
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                interstitialLoaded = interstitialAd.isLoaded();
-                synchronized(this){
-                    this.notify();
-                }
-            }
-        };
-
-        synchronized(r) {
-            runOnUiThread(r);
-
-            try {
-                r.wait() ;
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-        return interstitialLoaded;
+        return m_interstitialAd != null;
     }
 
 
@@ -413,7 +369,7 @@ public class AdActivity extends AndroidApplication implements AdManager {
             @Override
             public void run() {
                 interstitialClosedCallback = closedCallback;
-                if(interstitialAd != null && interstitialAd.isLoaded()) interstitialAd.show();
+                if(isInterstitialAdLoaded()) m_interstitialAd.show(AdActivity.this);
             }
         });
 
@@ -430,12 +386,39 @@ public class AdActivity extends AndroidApplication implements AdManager {
             public void run() {
                 rewardedAdFinishedCallback = finishedCallback;
                 rewardEarned = false;
-                if(rewardedAd != null  && rewardedAd.isLoaded()) rewardedAd.show(AdActivity.this, rewardedAdCallback);
+                m_rewardedAd.setFullScreenContentCallback(rewardedAdCallback);
+                if(isRewardedAdLoaded()) {
+                    m_rewardedAd.show(AdActivity.this, onUserEarnedRewardListener);
+                }
             }
         });
 
     }
 
+
+
+    private OnUserEarnedRewardListener onUserEarnedRewardListener = new OnUserEarnedRewardListener() {
+        @Override
+        public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
+            rewardEarned = true;
+        }
+    };
+
+
+    private FullScreenContentCallback rewardedAdCallback = new FullScreenContentCallback(){
+
+        @Override
+        public void onAdFailedToShowFullScreenContent(AdError adError) {
+            tryToLoadRewardedAgain();
+        }
+
+        @Override
+        public void onAdDismissedFullScreenContent() {
+            initRewardedAds();
+            rewardedAdFinishedCallback.closed(rewardEarned);
+        }
+
+    };
 
 
 

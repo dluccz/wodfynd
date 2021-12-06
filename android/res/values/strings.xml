@@ -11,9 +11,9 @@
 
 
     <!--  ADMOB CONFIGURATION -->
-    <string name="ADMOB_APP_ID">ca-app-pub-8523325147591124~2275034794</string>
-    <string name="ADMOB_REWARDED_AD_UNIT_ID">ca-app-pub-5823345147351229/5323949463</string>
-    <string name="ADMOB_INTERSTITIAL_AD_UNIT_ID">ca-app-pub-3525367197501327/3613209229</string>
+    <string name="ADMOB_APP_ID">ca-app-pub-2523368147551921~6285057394</string>
+    <string name="ADMOB_REWARDED_AD_UNIT_ID">ca-app-pub-2523368147551921/6323349664</string>
+    <string name="ADMOB_INTERSTITIAL_AD_UNIT_ID">ca-app-pub-2523368147551921/6714279724</string>
 
     <bool name="ADMOB_IS_INTERSTITIAL_AD_ENABLED">true</bool>
     <bool name="ADMOB_IS_REWARDED_AD_ENABLED_TO_EARN_COINS">true</bool>
@@ -28,14 +28,14 @@
     <integer name="ADMOB_INTERVAL_BETWEEN_REWARDED_ADS_IN_SECONDS">60</integer>
 
     <!-- If you enable this option you should also take into account the device hash code right below -->
-    <bool name="ADMOB_IS_TESTING_ADS">false</bool>
+    <bool name="ADMOB_IS_TESTING_ADS">true</bool>
 
     <!-- In order to test ads open logcat and search for "addTestDevice or setTestDeviceIds", then copy the hash code in that line below.
     Hash id for emulator is already embedded in code for you (it is a constant value) -->
-    <string name="ADMOB_REAL_DEVICE_HASH_ID_FOR_TESTING">E2A32550C689E73799A6AE0EB90508D4</string>
+    <string name="ADMOB_REAL_DEVICE_HASH_ID_FOR_TESTING">B3EEABB8EE11C2BE770B684D95219ECB</string>
 
     <!-- Your device will behave as if it were in a European country -->
-    <bool name="ADMOB_IS_TESTING_GDPR">false</bool>
+    <bool name="ADMOB_IS_TESTING_GDPR">true</bool>
 
 
 

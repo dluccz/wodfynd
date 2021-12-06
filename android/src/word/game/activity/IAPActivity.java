@@ -17,6 +17,7 @@ import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.ConsumeParams;
 import com.android.billingclient.api.ConsumeResponseListener;
 import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchasesResponseListener;
 import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
@@ -85,12 +86,16 @@ public class IAPActivity extends AdActivity implements PurchasesUpdatedListener,
         if(billingClient == null)
             return;
 
-        Purchase.PurchasesResult result = billingClient.queryPurchases(BillingClient.SkuType.INAPP);
 
-        List<Purchase> purchaseList = result.getPurchasesList();
-        if(purchaseList != null){
-            handlePurchases(purchaseList);
-        }
+        billingClient.queryPurchasesAsync(BillingClient.SkuType.INAPP, new PurchasesResponseListener(){
+
+            @Override
+            public void onQueryPurchasesResponse(@NonNull BillingResult billingResult, @NonNull List<Purchase> list) {
+                if(list != null) handlePurchases(list);
+            }
+        });
+
+
     }
 
 
@@ -111,26 +116,26 @@ public class IAPActivity extends AdActivity implements PurchasesUpdatedListener,
 
     void handlePurchase(Purchase purchase){
 
-        Log.d("iap", "Found purchase:"+purchase.getSku()+", purchase state:"+purchase.getPurchaseState());
+        Log.d("iap", "Found purchase:"+purchase.getSkus().get(0)+", purchase state:"+purchase.getPurchaseState());
         if(purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED){
 
             //ConsumeParams consumeParams = ConsumeParams.newBuilder().setPurchaseToken(purchase.getPurchaseToken()).build();
             //billingClient.consumeAsync(consumeParams, consumeResponseListener);
-
+            Log.d("iap", "purchase.isAcknowledged: " + purchase.isAcknowledged());
 
             if(!purchase.isAcknowledged()) {
 
-                if (purchase.getSku().equals(getString(R.string.IAP_ITEM_remove_ads))) {
+                if (purchase.getSkus().get(0).equals(getString(R.string.IAP_ITEM_remove_ads))) {
                     AcknowledgePurchaseParams acknowledgePurchaseParams = AcknowledgePurchaseParams.newBuilder().setPurchaseToken(purchase.getPurchaseToken()).build();
                     billingClient.acknowledgePurchase(acknowledgePurchaseParams, acknowledgePurchaseResponseListener);
                 } else {
                     ConsumeParams consumeParams = ConsumeParams.newBuilder().setPurchaseToken(purchase.getPurchaseToken()).build();
                     billingClient.consumeAsync(consumeParams, consumeResponseListener);
                 }
-                androidShoppingProcessor.hasMadeAPurchase(purchase.getSku(), true);
+                androidShoppingProcessor.hasMadeAPurchase(purchase.getSkus().get(0), true);
             }else{
-                if (purchase.getSku().equals(getString(R.string.IAP_ITEM_remove_ads))) {
-                    androidShoppingProcessor.hasMadeAPurchase(purchase.getSku(), false);
+                if (purchase.getSkus().get(0).equals(getString(R.string.IAP_ITEM_remove_ads))) {
+                    androidShoppingProcessor.hasMadeAPurchase(purchase.getSkus().get(0), false);
                 }
             }
         }
@@ -278,7 +283,7 @@ public class IAPActivity extends AdActivity implements PurchasesUpdatedListener,
 
 
 
-/**************************************************************************************************************************************************************************/
+    /**************************************************************************************************************************************************************************/
 
 
 
@@ -316,10 +321,10 @@ public class IAPActivity extends AdActivity implements PurchasesUpdatedListener,
 
         public void returnShoppingItems(List<SkuDetails> list){
 
-             if(list == null) {
-                 shoppingCallback.onShoppingItemsError(-1);
-                 return;
-             }
+            if(list == null) {
+                shoppingCallback.onShoppingItemsError(-1);
+                return;
+            }
 
             skuDetailsList = list;
 
@@ -348,8 +353,11 @@ public class IAPActivity extends AdActivity implements PurchasesUpdatedListener,
         public void hasMadeAPurchase(String sku, boolean newPurchase){
 
             if(sku.equals(getString(R.string.IAP_ITEM_remove_ads))) {
+                Gdx.app.log("purchase", "yes");
                 purchasedRemovedAds = true;
                 isInterstitialEnabled = false;
+            }else{
+                Gdx.app.log("purchase", "no");
             }
 
             if(newPurchase && shoppingCallback != null) {
