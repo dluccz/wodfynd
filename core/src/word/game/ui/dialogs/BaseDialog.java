@@ -202,7 +202,7 @@ public class BaseDialog extends Group implements BackNavigator {
 
 
     public void hide(){
-        screen.backNavQueue.pop();
+        if(screen.backNavQueue != null && screen.backNavQueue.size() > 0) screen.backNavQueue.pop();
         content.clearActions();
         closeDialog();
     }

@@ -101,7 +101,7 @@ public class DialAnimationContainer extends Group implements Disposable {
 
 
     public void setStage(int stage){
-
+        
         switch (stage){
             case 0:
                 stop();
