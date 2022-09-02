@@ -32,10 +32,10 @@
 
     <!-- In order to test ads open logcat and search for "addTestDevice or setTestDeviceIds", then copy the hash code in that line below.
     Hash id for emulator is already embedded in code for you (it is a constant value) -->
-    <string name="ADMOB_REAL_DEVICE_HASH_ID_FOR_TESTING">B3EEABB8EE11C2BE770B684D95219ECB</string>
+    <string name="ADMOB_REAL_DEVICE_HASH_ID_FOR_TESTING">708079EBDA51F19077F69825062A79C3</string>
 
     <!-- Your device will behave as if it were in a European country -->
-    <bool name="ADMOB_IS_TESTING_GDPR">true</bool>
+    <bool name="ADMOB_IS_TESTING_GDPR">false</bool>
 
 
 

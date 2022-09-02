@@ -18,7 +18,7 @@ android {
     }
     defaultConfig {
         applicationId "net.codecanyon.yourcodecanyonusername.android.worderful"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 32
         versionCode 1
         versionName "1.0.0"

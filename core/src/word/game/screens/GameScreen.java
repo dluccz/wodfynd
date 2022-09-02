@@ -1262,6 +1262,11 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
         if(remainingHints > 0) {
             --remainingHints;
             HintManager.setFingerHintRevealCount(remainingHints);
+        }else{
+            int remainingCoins = HintManager.getRemainingCoins();
+            int resultingCoins = remainingCoins - GameConfig.COIN_COST_OF_USING_FINGER_REVEAL;
+            HintManager.setCoinCount(resultingCoins);
+            topPanel.coinView.update(resultingCoins);
         }
         fingerHintBtn.update(remainingHints);
         boardOverlay.hide(callback);
@@ -1541,16 +1546,7 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
             disableButtons(false);
             stage.getRoot().setTouchable(Touchable.enabled);
 
-            if(!showLuckyWheel && wordConnectGame.adManager != null && wordConnectGame.adManager.isInterstitialAdEnabled() && ufo == null){
-                if(GameConfig.shouldWeShowAnInterstitialAdForThisLevel(gameController.level.index)){
-                    if(wordConnectGame.adManager.isInterstitialAdLoaded()) {
-                        wordConnectGame.adManager.showInterstitialAd(interstitialClosed);
-                        stage.getRoot().setTouchable(Touchable.disabled);
-                    }
-                }
-            }else{
-                triggerUfoFlyIn();
-            }
+            triggerUfoFlyIn();
 
         }
     };
@@ -1558,27 +1554,29 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
 
 
 
+    private void showInterstitial() {
+        if(wordConnectGame.adManager != null && wordConnectGame.adManager.isInterstitialAdEnabled()){
+            if(GameConfig.shouldWeShowAnInterstitialAdForThisLevel(gameController.level.index)){
+                if(wordConnectGame.adManager.isInterstitialAdLoaded()) {
+                    wordConnectGame.adManager.showInterstitialAd(interstitialClosed);
+                    stage.getRoot().setTouchable(Touchable.disabled);
+                }else{
+                    hideUI(showLevelFinishedView);
+                }
+            }else{
+                hideUI(showLevelFinishedView);
+            }
+        }else{
+            hideUI(showLevelFinishedView);
+        }
+    };
+
+
+
     private Runnable interstitialClosed = new Runnable() {
         @Override
         public void run() {
-            if(ufo == null){
-                if(tutorial == null && GameConfig.SHOW_REMOVE_ADS_DIALOG_AFTER_INTERSTITIAL && wordConnectGame.shoppingProcessor != null && wordConnectGame.shoppingProcessor.isIAPEnabled()) {
-                    if (removeAdsDialog == null) removeAdsDialog = new RemoveAdsDialog(stage.getWidth(), stage.getHeight(), GameScreen.this);
-
-                    stage.addActor(removeAdsDialog);
-                    removeAdsDialog.show();
-                }else{
-                    stage.getRoot().setTouchable(Touchable.enabled);
-                }
-            }else{
-                if(!UIConfig.INTERACTIVE_TUTORIAL_ENABLED || GameData.isUfoTutorialDisplayed()) ufo.startChrono();
-                else stage.getRoot().setTouchable(Touchable.enabled);
-            }
-
-
-            if(rewardedVideoButton != null){
-                rewardedVideoButton.stopRewardedGlow();
-            }
+            hideUI(showLevelFinishedView);
         }
     };
 
@@ -1852,6 +1850,10 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
         int remainingCoins = HintManager.getRemainingCoins();
 
         if(type == RewardRevealType.SINGLE_RANDOM_REVEAL){
+            if(boardView.getSingleRandomCell(null) == null){
+                stage.getRoot().setTouchable(Touchable.enabled);
+                return;
+            }
             int remaningHints = HintManager.getRemainingSingleRandomRevealCount();
             if(remaningHints == 0){
                 if(remainingCoins >= GameConfig.COIN_COST_OF_USING_SINGLE_RANDOM_REVEAL){
@@ -1876,6 +1878,12 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
             }
 
         }else if(type == RewardRevealType.MULTI_RANDOM_REVEAL){
+            if(boardView.selectMultipleCellsForHint(GameConfig.getNumberOfTilesToRevealForMultiRandomHint(gameController.level.index)).size == 0){
+                stage.getRoot().setTouchable(Touchable.enabled);
+                return;
+            }
+
+
             int remaningHints = HintManager.getRemainingMultiRandomRevealCount();
             if(remaningHints == 0){
                 if(remainingCoins >= GameConfig.COIN_COST_OF_USING_MULTI_RANDOM_REVEAL){
@@ -1903,9 +1911,9 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
             int remainingHints = HintManager.getRemainingFingerRevealCount();
             if(remainingHints == 0){
                 if(remainingCoins >= GameConfig.COIN_COST_OF_USING_FINGER_REVEAL){
-                    int resultingCoins = remainingCoins - GameConfig.COIN_COST_OF_USING_FINGER_REVEAL;
+                    /*int resultingCoins = remainingCoins - GameConfig.COIN_COST_OF_USING_FINGER_REVEAL;
                     HintManager.setCoinCount(resultingCoins);
-                    topPanel.coinView.update(resultingCoins);
+                    topPanel.coinView.update(resultingCoins);*/
                 }else{
                     hasEnoughCredit = false;
                 }
@@ -1925,6 +1933,11 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
 
 
         }else if(type == RewardRevealType.ROCKET_REVEAL){
+            if(gameController.level.getBoardModel().getRandomWordForRocket(boardView) == null){
+                stage.getRoot().setTouchable(Touchable.enabled);
+                showToast(LanguageManager.get("not_available_for_rocket"));
+                return;
+            }
             int remainingHints = HintManager.getRemainingRocketRevealCount();
             if(remainingHints == 0){
                 if(remainingCoins >= GameConfig.COIN_COST_OF_USING_ROCKET_REVEAL){
@@ -2044,11 +2057,10 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
 
 
     public void levelFinished(){
-
         stopIdleTimer();
         if(rewardedVideoButton != null) rewardedVideoButton.stopRewardedGlow();
         if(dialAnimationContainer != null) dialAnimationContainer.setStage(0);
-        hideUI(showLevelFinishedView);
+        showInterstitial();
     }
 
 
