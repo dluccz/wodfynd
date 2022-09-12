@@ -365,6 +365,8 @@ public class IAPActivity extends AdActivity implements PurchasesUpdatedListener,
                 Gdx.app.log("purchase", "yes");
                 purchasedRemovedAds = true;
                 isInterstitialEnabled = false;
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(IAPActivity.this);
+                preferences.edit().putBoolean(keyRemoveAdsPurchased, true).apply();
             }else{
                 Gdx.app.log("purchase", "no");
             }
@@ -372,10 +374,6 @@ public class IAPActivity extends AdActivity implements PurchasesUpdatedListener,
             if(newPurchase && shoppingCallback != null) {
                 shoppingCallback.onPurchase(sku);
                 Log.d("iap", "has made a purchase:" + sku + ", new: " + newPurchase);
-                if(sku.equals(getString(R.string.IAP_ITEM_remove_ads))){
-                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(IAPActivity.this);
-                    preferences.edit().putBoolean(keyRemoveAdsPurchased, true).apply();
-                }
             }
         }
 
