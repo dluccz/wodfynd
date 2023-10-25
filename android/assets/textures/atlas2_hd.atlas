@@ -1,8 +1,8 @@
 
 atlas2_hd.png
-size: 2048,1024
+size: 2048, 1024
 format: RGBA8888
-filter: Linear,Linear
+filter: Linear, Linear
 repeat: none
 board_cell
   rotate: false
@@ -31,14 +31,14 @@ box_rays
   index: -1
 btn_dictionary_down
   rotate: false
-  xy: 1303, 709
+  xy: 1206, 709
   size: 95, 95
   orig: 95, 95
   offset: 0, 0
   index: -1
 btn_dictionary_up
   rotate: false
-  xy: 1206, 709
+  xy: 1303, 709
   size: 95, 95
   orig: 95, 95
   offset: 0, 0
@@ -73,7 +73,7 @@ disc_particle
   index: -1
 extra_words_down
   rotate: false
-  xy: 834, 514
+  xy: 921, 519
   size: 85, 85
   orig: 85, 85
   offset: 0, 0
@@ -87,14 +87,14 @@ extra_words_up
   index: -1
 finger_hint_down
   rotate: false
-  xy: 1787, 903
+  xy: 504, 491
   size: 108, 108
   orig: 108, 108
   offset: 0, 0
   index: -1
 finger_hint_up
   rotate: false
-  xy: 504, 491
+  xy: 724, 491
   size: 108, 108
   orig: 108, 108
   offset: 0, 0
@@ -140,28 +140,28 @@ preview
   index: -1
 random_hint_multi_down
   rotate: false
-  xy: 1595, 774
+  xy: 1508, 774
   size: 85, 85
   orig: 85, 85
   offset: 0, 0
   index: -1
 random_hint_multi_up
   rotate: false
-  xy: 1508, 774
+  xy: 834, 514
   size: 85, 85
   orig: 85, 85
   offset: 0, 0
   index: -1
 rewarded_video_down
   rotate: false
-  xy: 1682, 799
+  xy: 1595, 774
   size: 85, 85
   orig: 85, 85
   offset: 0, 0
   index: -1
 rewarded_video_up
   rotate: false
-  xy: 921, 519
+  xy: 1682, 799
   size: 85, 85
   orig: 85, 85
   offset: 0, 0
@@ -182,7 +182,7 @@ shuffle_down
   index: -1
 shuffle_up
   rotate: false
-  xy: 724, 491
+  xy: 1787, 903
   size: 108, 108
   orig: 108, 108
   offset: 0, 0

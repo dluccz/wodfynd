@@ -1132,7 +1132,6 @@ public class GameScreen extends BaseScreen implements ShowDictionaryEvent {
                     public void changed(ChangeEvent event, Actor actor) {
                         if(!rewardedVideoButton.timerRunning()) {
                             if(wordConnectGame.adManager.isRewardedAdLoaded())
-                                //wordConnectGame.adManager.showRewardedAd(rewardVideoForCoinsHasFinishedGameScreen);
                                 openWatchAndEarnDialog(false);
                             else
                                 showToast(LanguageManager.get("no_video"));

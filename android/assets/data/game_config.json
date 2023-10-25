@@ -6,7 +6,7 @@
 	"game":{"total_words_to_earn_bonus":50},
 	
 	"settings_menu":{
-		"menu_item_language_enabled":true,
+		"menu_item_language_enabled":false,
 		"menu_item_sound_enabled":true,
 		"menu_item_rateus_enabled":true,
 		"menu_item_support_enabled":true,
@@ -16,7 +16,7 @@
 	},
 	
 	"available_languages":{
-		"en":{"flag":"en.png", "label":"English"},
+		"en":{"flag":"en.png", "label":"Portugues"},
 		"tr":{"flag":"tr.png", "label":"Türkçe"},
 		"ar":{"flag":"ar.png", "label":"عربى"}
 	}

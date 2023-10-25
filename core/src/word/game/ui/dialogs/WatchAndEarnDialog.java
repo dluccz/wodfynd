@@ -44,7 +44,7 @@ public class WatchAndEarnDialog extends BaseDialog{
         String font = UIConfig.DIALOG_BODY_TEXT_USE_SHADOW_FONT ? ResourceManager.fontSemiBoldShadow : ResourceManager.fontSemiBold;
         Label.LabelStyle bodyTextStyle = new Label.LabelStyle(screen.wordConnectGame.resourceManager.get(font, BitmapFont.class), UIConfig.DIALOG_BODY_TEXT_COLOR);
 
-        Label adInvite = new Label(LanguageManager.get("ad_invite"), bodyTextStyle);
+        Label adInvite = new Label(LanguageManager.format("ad_invite", GameConfig.NUMBER_OF_COINS_EARNED_FOR_WATCHING_VIDEO), bodyTextStyle);
         adInvite.setAlignment(Align.center);
         adInvite.setWrap(true);
         adInvite.setWidth(content.getWidth() * 0.8f);

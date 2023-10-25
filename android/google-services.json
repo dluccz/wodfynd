@@ -1,37 +1,26 @@
 {
   "project_info": {
-    "project_number": "304361454359",
-    "firebase_url": "https://wordconnect-rt4g5.firebaseio.com",
-    "project_id": "wordconnect-rt4g5",
-    "storage_bucket": "wordconnect-rt4g5.appspot.com"
+    "project_number": "58751067754",
+    "project_id": "dlgames-34383",
+    "storage_bucket": "dlgames-34383.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:304361454359:android:2a4924690rbn157b704h2a",
+        "mobilesdk_app_id": "1:58751067754:android:648b3618a2cbabc9e08c13",
         "android_client_info": {
-          "package_name": "net.codecanyon.yourcodecanyonusername.android.worderful"
+          "package_name": "com.reso.cacawords"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "304361454359-4o2ag5eou7ck2p1b74sdvdj67ie4lqv5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "TYzcSyR-2tsCtqKSUNPoqo6pqHP2BLr7om-T0n1"
+          "current_key": "AIzaSyBMYnwnBFMR-8SJDjam_aoFPyou0U-lWrg"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "304361454359-4o2ag5eou7ck2p1b74sdvdj67ie4lqv5.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
